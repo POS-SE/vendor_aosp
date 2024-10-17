@@ -236,8 +236,7 @@ PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     NotchBarKillerOverlay \
     NetworkStackOverlay \
-    NavigationBarNoHintOverlay \
-    ThemedIconsOverlay
+    NavigationBarNoHintOverlay
 
 # TextClassifier
 PRODUCT_PACKAGES += \
@@ -260,6 +259,9 @@ $(call inherit-product, vendor/aosp/config/ota.mk)
 
 # Stuffs
 $(call inherit-product-if-exists, vendor/aosp/extras/config.mk)
+
+# Themed icons
+$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
 
 # Translations
 $(call inherit-product-if-exists, vendor/aosp/translations/translations.mk)
